@@ -1,7 +1,7 @@
 {
   k:: {
     deployment: {
-      new(name, port, resources): {
+      new(name, image, port, resources): {
         apiVersion: "apps/v1",
         kind: "Deployment",
         metadata: {
@@ -24,7 +24,7 @@
             },
             spec: {
               containers: [{
-                image: $._config.sillydemo.image,
+                image: image,
                 name: name,
                 ports: [{
                   containerPort: port,

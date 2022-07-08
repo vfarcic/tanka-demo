@@ -2,6 +2,7 @@
   devopstoolkit: {
     deployment: $.k.deployment.new(
       "devops-toolkit",
+      $._config.devopstoolkit.image,
       80,
       {
         limits: {
@@ -22,7 +23,7 @@
     ingress: $.k.ingress.new(
         "devops-toolkit", 
         80,
-        "https://devopstoolkitseries.com/",
+        "devopstoolkitseries.com",
     ),
   },
 }

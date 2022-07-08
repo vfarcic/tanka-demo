@@ -14,7 +14,7 @@ local k = import "github.com/grafana/jsonnet-libs/ksonnet-util/kausal.libsonnet"
     apiVersion: "v1",
     kind: "Namespace",
     metadata: {
-      name: "monitoring"
+      name: "production"
     }
   },
   local deployment = k.apps.v1.deployment,

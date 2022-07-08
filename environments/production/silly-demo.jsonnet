@@ -2,6 +2,7 @@
   sillydemo: {
     deployment: $.k.deployment.new(
       "silly-demo",
+      $._config.sillydemo.image,
       8080,
       {
         limits: {
